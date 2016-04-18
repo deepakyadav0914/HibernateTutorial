@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+	    <!-- Connection settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/psp_automation</property>
+		<property name="hibernate.connection.username">dyadav</property>
+		<property name="hibernate.connection.password">Welcome@123</property>
+		
+		<!-- Connection pool settings -->
+		<property name="connection.pool_size">1</property>	
+		
+		<!-- Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- Disable the second level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		
+		<!-- To show wich it ran -->
+		<property name="show_sql">true</property>
+		
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+		<property name="hbm2ddl.auto">create</property>
+		
+		<!-- List of XML mapping files -->
+		
+		<mapping class="com.advanced.Hibernate.dto.TestCases" />
+		
+		<!-- <mapping class="com.advanced.Hibernate.dto.UserDetails" />
+		<mapping class="com.advanced.Hibernate.dto.Reports" />
+		<mapping class="com.advanced.Hibernate.dto1.UserDetails1" />
+		<mapping class="com.advanced.Hibernate.dto2.retrieveObjects.UserDetails2" /> 
+		<mapping class="com.advanced.Hibernate.dto3.primaryKeys.UserDetails3" />
+		<mapping class="com.advanced.Hibernate.dto4.valueTypesEmbedObjects.UserDetails4" />
+		<mapping class="com.advanced.Hibernate.dto5.AttributeTypeAndEmbedObjectKeys.UserDetails5" />
+		<mapping class="com.advanced.Hibernate.dto6.savingCollections.UserDetails6" />
+		<mapping class="com.advanced.Hibernate.dto7.confCollectionsAddKeys.UserDetails7" /> 
+		<mapping class="com.advanced.Hibernate.dto8.ProxyObj_Eager_LazyFetchTypes.UserDetails8" /> -->
+		
+		
+	</session-factory>
+</hibernate-configuration>
